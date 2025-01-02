@@ -31,6 +31,13 @@ def main():
         
         for element in updatable:
             element.update(delta_time)
+
+        for element in asteroids:
+            collided:bool = element.check_collision(player)
+
+            if (collided):
+                print("Game Over!")
+                return
             
         screen.fill("black")
 
