@@ -21,6 +21,9 @@ class Asteroid(CircleShape):
 
         update(delta_time: int) -> None
             Moves the asteroid forwards
+
+        split() -> None
+            Splits the asteroid into two if possible
     """
 
     def __init__(self, x:int, y:int, radius:int):

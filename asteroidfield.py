@@ -11,6 +11,14 @@ class AsteroidField(pygame.sprite.Sprite):
     Attributes
     ----------
         edges - list of vectors to calculate direction and spawn edge
+    
+    Methods
+    -------
+        spawn(position: int, velocity: int, radius: int) -> None
+            Spawns the new asteroid 
+
+        update(delta_time: int) -> None
+            Calculates spawn of a new asteroid
     """
 
     edges = [
