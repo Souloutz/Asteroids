@@ -11,6 +11,11 @@ def main():
     clock = pygame.time.Clock()
     delta_time = 0 # time since last frame drawn
 
+    updatable = pygame.sprite.Group()
+    drawable = pygame.sprite.Group()
+
+    # Adds containers as static field
+    Player.containers = (drawable, updatable)
     player:Player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
 
     while (True):
@@ -18,9 +23,13 @@ def main():
             if event.type == pygame.QUIT:
                 return
         
-        player.update(delta_time)
+        for element in updatable:
+            element.update(delta_time)
+            
         screen.fill("black")
-        player.draw(screen)
+
+        for element in drawable:
+            element.draw(screen)
         
         pygame.display.flip() # refreshes the screen
         delta_time = clock.tick(60) / 1000 # limit framemate to 60 FPS
