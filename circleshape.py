@@ -8,8 +8,8 @@ class CircleShape(pygame.sprite.Sprite):
     
     Attributes
     ----------
-        x: int - x position
-        y: int - y position
+        position: int - x, y position
+        velocity: int - speed in direction
         radius: int - radius of circle
 
     Methods
