@@ -19,6 +19,9 @@ class CircleShape(pygame.sprite.Sprite):
 
         update() -> None
             Update the game object on the screen
+
+        check_collision(object: CircleShape) -> bool
+            Check if a collision occurred
     """
 
     def __init__(self, x:int, y:int, radius:int):
