@@ -5,7 +5,7 @@ from circleshape import CircleShape
 
 class Player(CircleShape):
     """
-    Represents a Player - extends CircleShape
+    Represents a Player
 
     Attributes
     ----------
