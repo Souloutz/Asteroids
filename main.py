@@ -1,6 +1,6 @@
 import pygame
 
-from constants import *
+from constants import SCREEN_HEIGHT, SCREEN_WIDTH
 from player import Player
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
@@ -47,7 +47,7 @@ def main():
 
                 if (collided):
                     shot.kill()
-                    asteroid.kill()
+                    asteroid.split()
                 
         screen.fill("black")
 
